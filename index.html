@@ -1,0 +1,250 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Explore TJ Hub honey and bee products and find M-Pesa payment instructions."
+  >
+
+  <title>TJ Hub | Honey & Bee Products</title>
+
+  <!-- Connect the CSS file -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Connect the JavaScript file -->
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="#" class="brand" aria-label="TJ Hub home">
+      <span class="brand-icon">🍯</span>
+      <span>TJ <span class="brand-highlight">Hub</span></span>
+    </a>
+
+    <nav class="navigation" aria-label="Main navigation">
+      <a href="#products">Products</a>
+      <a href="#order">My Order</a>
+      <a href="#payment">M-Pesa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">NATURAL • PURE • QUALITY</p>
+      <h1>Nature's Goodness, <span>Delivered.</span></h1>
+
+      <p class="hero-description">
+        Discover our honey and bee products, select what you need,
+        and follow the instructions to pay through M-Pesa.
+      </p>
+
+      <a class="primary-button" href="#products">
+        Explore Our Products
+      </a>
+    </section>
+
+    <section class="section" id="products">
+      <div class="section-heading">
+        <p class="eyebrow">OUR COLLECTION</p>
+        <h2>Honey & Bee Products</h2>
+        <p>Choose your products and enter the quantity you need.</p>
+      </div>
+
+      <div class="product-grid">
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🍯</div>
+          <h3>Pure Honey 1kg</h3>
+          <p class="product-description">Pure honey in a 1kg pack.</p>
+          <p class="product-price">KSh 1,500</p>
+          <label for="honey-1kg">Quantity</label>
+          <input
+            id="honey-1kg"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Pure Honey 1kg"
+            data-price="1500"
+          >
+        </article>
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🍯</div>
+          <h3>Pure Honey 1/2kg</h3>
+          <p class="product-description">Pure honey in a 500g pack.</p>
+          <p class="product-price">KSh 750</p>
+          <label for="honey-half">Quantity</label>
+          <input
+            id="honey-half"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Pure Honey 1/2kg"
+            data-price="750"
+          >
+        </article>
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🐝</div>
+          <h3>Honeycomb</h3>
+          <p class="product-description">Natural honeycomb product.</p>
+          <p class="product-price">KSh 2,000</p>
+          <label for="honeycomb">Quantity</label>
+          <input
+            id="honeycomb"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Honeycomb"
+            data-price="2000"
+          >
+        </article>
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🕯️</div>
+          <h3>Wax / Beeswax</h3>
+          <p class="product-description">Beeswax for your chosen use.</p>
+          <p class="product-price">KSh 1,800</p>
+          <label for="beeswax">Quantity</label>
+          <input
+            id="beeswax"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Wax / Beeswax"
+            data-price="1800"
+          >
+        </article>
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🐝</div>
+          <h3>Bee Venom</h3>
+          <p class="product-description">Bee venom product.</p>
+          <p class="product-price">KSh 6,000</p>
+          <label for="bee-venom">Quantity</label>
+          <input
+            id="bee-venom"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Bee venom"
+            data-price="6000"
+          >
+        </article>
+
+        <article class="product-card">
+          <div class="product-emoji" aria-hidden="true">🌿</div>
+          <h3>Lemongrass Oil</h3>
+          <p class="product-description">Lemongrass oil product.</p>
+          <p class="product-price">KSh 1,200</p>
+          <label for="lemongrass">Quantity</label>
+          <input
+            id="lemongrass"
+            class="quantity-input"
+            type="number"
+            min="0"
+            step="1"
+            value="0"
+            inputmode="numeric"
+            data-product="Lemongrass oil"
+            data-price="1200"
+          >
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section order-section" id="order">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR SELECTION</p>
+        <h2>Order Summary</h2>
+        <p>Your total updates when you change product quantities.</p>
+      </div>
+
+      <div class="order-panel">
+        <div id="order-items" class="order-items" aria-live="polite">
+          <p class="empty-message">You have not selected any products yet.</p>
+        </div>
+
+        <div class="order-total">
+          <span>Total</span>
+          <strong id="order-total">KSh 0</strong>
+        </div>
+
+        <button id="copy-order" class="primary-button full-button" type="button">
+          Copy Order Summary
+        </button>
+        <div>
+            <p>Send your Order Summary to the Seller</p>
+        </div>
+
+        <p id="order-status" class="status-message" role="status"></p>
+      </div>
+    </section>
+
+    <section class="section payment-section" id="payment">
+      <div class="section-heading">
+        <p class="eyebrow">SIMPLE PAYMENT INSTRUCTIONS</p>
+        <h2>Pay via M-Pesa</h2>
+        <p>Use the number below to make your payment.</p>
+      </div>
+
+      <div class="payment-panel">
+        <p class="payment-label">M-Pesa recipient number</p>
+
+        <div class="phone-number">
+          <span id="mpesa-number">0722 103 868</span>
+          <button id="copy-number" class="secondary-button" type="button">
+            Copy Number
+          </button>
+        </div>
+
+        <ol class="payment-steps">
+          <li>Open M-Pesa on your phone.</li>
+          <li>Select <strong>Send Money</strong>.</li>
+          <li>Enter <strong>0722103868</strong> as the recipient.</li>
+          <li>Enter the amount for your order.</li>
+          <li>Confirm the recipient's name and payment details before sending.</li>
+        </ol>
+
+        <p class="payment-notice">
+          Please confirm your order and the recipient's details before paying.
+          Keep your M-Pesa confirmation message as proof of payment.
+        </p>
+
+        <p id="payment-status" class="status-message" role="status"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#" class="brand footer-brand">🍯 TJ Hub</a>
+    <p>Natural products. Simple ordering.</p>
+    <p class="footer-note">
+      This page displays product information and payment instructions.
+      It does not initiate, receive, or automatically verify M-Pesa payments.
+    </p>
+    <p>&copy; <span id="current-year"></span> TJ Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
